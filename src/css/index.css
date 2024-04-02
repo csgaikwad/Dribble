@@ -1,0 +1,41 @@
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Checkbox Styles */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: 1.5px solid lightgray;
+  border-radius: 1px;
+  background-color: transparent;
+  @apply cursor-pointer size-5;
+}
+
+input[type="checkbox"]:checked {
+  border: 1.5px solid #ea4b8b;
+  background-color: #ea4b8b;
+}
+label{
+    @apply pl-2 font-extrabold tracking-tight text-[0.9rem] mt-4;
+}
+
+/* Other Styles */
+.sacramento {
+  font-family: "Sacramento";
+}
+
+.roboto {
+  font-family: "Roboto";
+}
+
+input {
+  @apply bg-gray-200 h-8 rounded-md px-2 m-1 outline-none;
+}
+
+span {
+  @apply cursor-pointer;
+}
