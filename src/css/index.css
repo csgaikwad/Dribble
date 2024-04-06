@@ -12,7 +12,7 @@ input[type="checkbox"] {
   border: 1.5px solid lightgray;
   border-radius: 1px;
   background-color: transparent;
-  @apply cursor-pointer size-5;
+  @apply cursor-pointer size-5 px-2;
 }
 
 input[type="checkbox"]:checked {
@@ -26,16 +26,36 @@ label{
 /* Other Styles */
 .sacramento {
   font-family: "Sacramento";
+  @apply text-[2rem] tracking-wide font-semibold ;
 }
 
 .roboto {
   font-family: "Roboto";
+  @apply text-[1.5rem];
 }
 
-input {
-  @apply bg-gray-200 h-8 rounded-md px-2 m-1 outline-none;
+input:not([type="checkbox"]):not([type="file"]):not(.customInput) {
+  @apply bg-gray-200 h-8 rounded-md px-4 m-1 outline-none text-[0.8rem] font-sans font-semibold;
 }
+
 
 span {
   @apply cursor-pointer;
+}
+
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 3s infinite;
 }
