@@ -59,3 +59,8 @@ span {
 .heartbeat {
   animation: heartbeat 3s infinite;
 }
+.linearGradient{
+  background:linear-gradient(180deg,#00dbde,#fc00ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}

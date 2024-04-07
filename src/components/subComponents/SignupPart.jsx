@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 export default function SignupPart() {
   const [name, setName] = useState("John");
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("John");
+  const [email, setEmail] = useState("John@gmail.com");
   const [password, setPassword] = useState("");
   const [checked, setChecked] = useState();
   const [btnEnabled, setBtnEnabled] = useState(false);
@@ -22,7 +22,19 @@ export default function SignupPart() {
         Already a member?{" "}
         <span className="text-[#5746AD] font-semibold ">Sign in</span>
       </p>
-      <form action="submit" className="mt-14">
+      <form
+        action="submit"
+        className="mt-14"
+        onSubmit={(e) => {
+          e.preventDefault();
+          Swal.fire({
+            icon: "success",
+            title: "Account Created!",
+            text: "Your account has been successfully created.",
+          });
+          navigate("/profile");
+        }}
+      >
         <h1 className="text-[1.3rem] font-bold tracking-tighter mb-4">
           Sign up to Dribbble
         </h1>
@@ -119,15 +131,6 @@ export default function SignupPart() {
           className={`${btnEnabled ? "bg-[#EA4B8B]" : "bg-pink-300"}
           h-10 text-white rounded-lg w-60`}
           disabled={!btnEnabled}
-          onClick={(e) => {
-            e.preventDefault();
-            Swal.fire({
-              icon: "success",
-              title: "Account Created!",
-              text: "Your account has been successfully created.",
-            });
-            navigate("/profile");
-          }}
         >
           Create Account
         </button>
