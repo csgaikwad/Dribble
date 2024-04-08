@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import Home from "./components/Home";
 import Purpose from "./components/Purpose";
 import { AnimatePresence, motion } from "framer-motion";
+import VerifyEmail from "./components/VerifyEmail";
 
 function App() {
   const location = useLocation(); // Using useLocation hook
@@ -58,7 +59,7 @@ function App() {
               }}
               exit={{
                 x: "100%",
-                transition: { duration: 1 },
+                transition: { duration: 0.5 },
               }}
             >
               <Profile />
@@ -70,17 +71,36 @@ function App() {
           element={
             <motion.div
               key="purpose"
-              initial={{  scale: 1 }}
+              initial={{  x: "-100%" }}
               animate={{
-                scale: 1,
-                transition: { duration: 1 },
+                x: "0",
+                transition: { duration: 0.5 },
               }}
               exit={{
-                y: "100%",
-                transition: { duration: 1 },
+                x: "100%",
+                transition: { duration: 0.5 },
               }}
             >
               <Purpose />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/verification"
+          element={
+            <motion.div
+              key="purpose"
+              initial={{  y: "-100%" }}
+              animate={{
+                y: "0",
+                transition: { duration: 0.5 },
+              }}
+              exit={{
+                x: "100%",
+                transition: { duration: 0.5 },
+              }}
+            >
+              <VerifyEmail />
             </motion.div>
           }
         />

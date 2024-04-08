@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 /* Custom Checkbox Styles */
-input[type="checkbox"] {
+.customInput {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -15,10 +15,59 @@ input[type="checkbox"] {
   @apply cursor-pointer size-5 px-2;
 }
 
-input[type="checkbox"]:checked {
+.customInput:checked {
   border: 1.5px solid #ea4b8b;
   background-color: #ea4b8b;
 }
+
+
+
+
+
+.customInputRound {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 1.5px solid lightgray;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 1.4em;
+  height: 1.4em;
+  cursor: pointer;
+  position: relative;
+  margin-top:4px;
+}
+
+.customInputRound:checked {
+  border: 1.5px solid #ea4b8b;
+  background-color: #ea4b8b;
+}
+
+.customInputRound::after {
+  content:"";
+  position: absolute;
+  top: 5%;
+  left:30%;
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+  height: 0.9em;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.customInputRound:checked::after {
+  opacity: 1;
+}
+
+
+
+
+
+
+
 label{
     @apply pl-2 font-extrabold tracking-tight text-[0.9rem] mt-4;
 }
@@ -34,7 +83,7 @@ label{
   @apply text-[1.5rem];
 }
 
-input:not([type="checkbox"]):not([type="file"]):not(.customInput) {
+input:not([type="checkbox"]):not([type="file"]):not(.customInputLocation) {
   @apply bg-gray-200 h-8 rounded-md px-4 m-1 outline-none text-[0.8rem] font-sans font-semibold;
 }
 

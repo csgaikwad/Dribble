@@ -1,7 +1,131 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Purpose() {
+  const navigate = useNavigate();
+  const [option1, setOption1] = useState(false);
+  const [option2, setOption2] = useState(false);
+  const [option3, setOption3] = useState(false);
+  const [optionSelected, setSelected] = useState(false);
+  useEffect(() => {
+    option1 | option2 | option3 ? setSelected(true) : setSelected(false);
+  }, [option1, option2, option3]);
+
+
+
   return (
-    <div>Purpose</div>
-  )
+    <div
+      className="h-screen flex flex-col"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" && optionSelected) {
+          navigate("/verification");
+        }
+      }}
+    >
+      <div className="flex items-center">
+        <h1 className="sacramento pt-7 pl-10 pb-3 text-pink-500 inline-block">
+          dribble
+        </h1>
+        <button
+          className="mx-2 mt-2 rounded-lg bg-[#f2f2f2] size-10 text-center pb-1 text-[#716f7b] font-bold"
+          onClick={() => {
+            navigate("/profile");
+          }}
+        >
+          &lt;{" "}
+        </button>
+      </div>
+      <div className="flex flex-col items-center sm:w-[30rem] p-4 sm:p-0 text-nowrap sm:self-center">
+        <h1 className="text-[1.6rem] font-extrabold mb-2 tracking-tight">
+          What brings you to Dribble?
+        </h1>
+        <p className="text-gray-500 text-[0.7rem]">
+          Select the options that best describe you. Don't worry, you can
+          explore other options later.
+        </p>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-14">
+        <div
+          className={`flex flex-col text-center border-2 ${
+            option1 ? "border-pink-600" : "border-gray-200"
+          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer`}
+          onClick={() => {
+            setOption1(!option1);
+          }}
+        >
+          <img className="w-40 h-28" src="/1.png" alt="Option1" />
+          <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
+            I'm a designer looking to share my work
+          </h2>
+          <input
+            className="customInputRound"
+            type="checkbox"
+            name="options"
+            id="option1"
+            checked={option1}
+            onChange={() => setOption1(!option1)}
+          />
+        </div>
+        <div
+          className={`flex flex-col text-center border-2 ${
+            option2 ? "border-pink-600" : "border-gray-200"
+          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer`}
+          onClick={() => {
+            setOption2(!option2);
+          }}
+        >
+          <img className="w-40 h-28" src="/2.png" alt="Option2" />
+          <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
+            I'm looking to hire a designer
+          </h2>
+          <input
+            className="customInputRound"
+            type="checkbox"
+            name="options"
+            id="option2"
+            checked={option2}
+            onChange={() => setOption2(!option2)}
+          />
+        </div>
+        <div
+          className={`flex flex-col text-center border-2 ${
+            option3 ? "border-pink-600" : "border-gray-200"
+          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer`}
+          onClick={() => {
+            setOption3(!option3);
+          }}
+        >
+          <img className="w-40 h-28" src="/3.png" alt="Option3" />
+          <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
+            I'm looking for design inspiration
+          </h2>
+
+          <input
+            className="customInputRound"
+            type="checkbox"
+            name="options"
+            id="option3"
+            checked={option3}
+            onChange={() => setOption3(!option3)}
+          />
+        </div>
+      </div>
+      <p className="text-[0.8rem] font-bold self-center mt-4 ">
+        {optionSelected ? "Anything else? You can select multiple" : ""}
+      </p>
+      <button
+        className={`  w-40 h-7 rounded-md self-center ${
+          optionSelected ? "mt-[0.8rem] bg-pink-500" : "mt-8 bg-[#f8b8d0]"
+        } text-white text-[0.8rem]`}
+        disabled={!optionSelected}
+        onClick={() => navigate("/verification")}
+      >
+        Finish
+      </button>
+      <p className="text-[0.7rem] font-bold text-gray-400 self-center">
+        {optionSelected ? "or Press RETURN" : ""}
+      </p>
+    </div>
+  );
 }

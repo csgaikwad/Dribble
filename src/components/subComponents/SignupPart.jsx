@@ -104,7 +104,7 @@ export default function SignupPart() {
             type="checkbox"
             name="checkbox"
             id="checkbox"
-            className="mt-4"
+            className="mt-4 customInput"
             value={checked}
             onChange={(e) => {
               setChecked(e.target.checked);

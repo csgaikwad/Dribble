@@ -21,11 +21,20 @@ export default function Profile() {
   };
 
   function handleButtonClick() {
-    navigate("/purpose");
+    uploadedImg && location && navigate("/purpose");
   }
 
   return (
-    <div className="h-screen  flex flex-col">
+    <div
+      className="h-screen  flex flex-col"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        console.log(e.key)
+        if (e.key === "Enter" && uploadedImg && location ) {
+          handleButtonClick();
+        }
+      }}
+    >
       <h1 className="sacramento pt-7 pl-10 pb-3 text-pink-500 ">dribble</h1>
       <div className="flex flex-col  items-start sm:w-[30rem] p-4 sm:p-0 text-wrap sm:self-center">
         <div>
@@ -78,15 +87,10 @@ export default function Profile() {
           type="text"
           name="location"
           placeholder="Enter a location"
-          className="customInput  h-8   m-1 outline-none text-[0.8rem] font-sans font-semibold border-b-2 w-full"
+          className="customInputLocation  h-8   m-1 outline-none text-[0.8rem] font-sans font-semibold border-b-2 w-full"
           value={location}
           onChange={(e) => {
             setlocation(e.target.value);
-          }}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              handleButtonClick();
-            }
           }}
         />
         <div className="flex flex-col">
