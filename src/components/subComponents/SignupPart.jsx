@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import Swal from "sweetalert2";
 
 export default function SignupPart() {
   const [name, setName] = useState("John");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("John@gmail.com");
   const [password, setPassword] = useState("");
-  const [checked, setChecked] = useState();
+  const [checked, setChecked] = useState(false);
   const [btnEnabled, setBtnEnabled] = useState(false);
   const navigate = useNavigate();
 
@@ -17,7 +19,8 @@ export default function SignupPart() {
       : setBtnEnabled(false);
   }, [name, username, email, password, checked]);
   return (
-    <div className="w-[20rem] p-2 sm:p-0">
+    <div className="w-[20rem] p-2 sm:p-0 ">
+      <ToastContainer position="top-right" autoClose={1000} />
       <p className="text-[0.7rem] m-1 absolute right-4 top-4">
         Already a member?{" "}
         <span className="text-[#5746AD] font-semibold ">Sign in</span>
@@ -27,20 +30,29 @@ export default function SignupPart() {
         className="mt-14"
         onSubmit={(e) => {
           e.preventDefault();
-          Swal.fire({
-            icon: "success",
-            title: "Account Created!",
-            text: "Your account has been successfully created.",
-          });
-          navigate("/profile");
+          toast.success("Account Created");
+
+          // Swal.fire({
+          //   icon: "success",
+          //   title: "Account Created!",
+          //   text: "Your account has been successfully created.",
+          // });
+
+          setTimeout(() => {
+            navigate("/profile");
+          }, 1500);
         }}
       >
-        <h1 className="text-[1.3rem] font-bold tracking-tighter mb-4">
+        <h1
+          className={`text-[1.3rem] font-bold tracking-tighter ${
+            !username && "mb-6"
+          }`}
+        >
           Sign up to Dribbble
         </h1>
         <div
           className={`${username ? "block" : "hidden"}
-          text-red-500 text-[0.7rem] mb-4 `}
+          text-red-500 text-[0.7rem] mt-2 `}
         >
           <li>Username has already been taken</li>
         </div>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function SignUp() {
   return (
-    <div className="sm:grid grid-cols-2 gap-2">
+    <div className="sm:grid grid-cols-2 gap-2 overflow-hidden">
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: "0vw", transition: { duration: 0.5 } }}

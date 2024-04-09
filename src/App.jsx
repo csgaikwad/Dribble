@@ -5,7 +5,7 @@ import Profile from "./components/Profile";
 import Home from "./components/Home";
 import Purpose from "./components/Purpose";
 import { AnimatePresence, motion } from "framer-motion";
-import VerifyEmail from "./components/VerifyEmail";
+import VerifyEmail from "./components/Verify";
 
 function App() {
   const location = useLocation(); // Using useLocation hook
@@ -40,7 +40,7 @@ function App() {
               key="signup"
               exit={{
                 y: "-100%",
-                transition: { duration: 1 },
+                transition: { duration: 0.5 },
               }}
             >
               <SignUp />
@@ -55,7 +55,7 @@ function App() {
               initial={{ y: "100%" }}
               animate={{
                 y: "0vw",
-                transition: { duration: 1 },
+                transition: { duration: 0.5 },
               }}
               exit={{
                 x: "100%",
