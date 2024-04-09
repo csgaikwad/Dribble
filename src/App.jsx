@@ -5,7 +5,7 @@ import Profile from "./components/Profile";
 import Home from "./components/Home";
 import Purpose from "./components/Purpose";
 import { AnimatePresence, motion } from "framer-motion";
-import VerifyEmail from "./components/Verify";
+import Verify from "./components/Verify";
 
 function App() {
   const location = useLocation(); // Using useLocation hook
@@ -101,7 +101,7 @@ function App() {
                 transition: { duration: 0.5 },
               }}
             >
-              <VerifyEmail />
+              <Verify />
             </motion.div>
           }
         />

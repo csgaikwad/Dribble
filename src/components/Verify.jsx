@@ -5,7 +5,7 @@ import Footer from './subComponents/Footer'
 
 export default function VerifyEmail() {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen w-screen '>
       <Navbar/>
       <EmailVerification/>
       <Footer/>

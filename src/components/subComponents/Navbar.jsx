@@ -7,8 +7,8 @@ export default function Navbar() {
   const user = useRecoilValue(UserAtom);
   const navigate = useNavigate();
   return (
-    <div className="flex justify-between border-b-2 border-gray-100 h-14">
-      <div className="flex px-8 mt-6 mb-4 gap-8 items-center justify-center">
+    <div className="flex  justify-between border-b-2 border-gray-100 h-14 ">
+      <div className="flex px-4 md:px-8 mt-6 mb-4 md:gap-8 items-center justify-center">
         <h1
           className="sacramento cursor-pointer transition duration-300 hover:scale-110"
           style={{ fontSize: "1.6rem" }}
@@ -17,7 +17,7 @@ export default function Navbar() {
           dribble
         </h1>
         <div>
-          <ul className="flex gap-8  justify-center items-center text-[0.8rem] text-gray-500">
+          <ul className="hidden md:flex gap-8  justify-center items-center text-[0.8rem] text-gray-500">
             <li className="font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
               Inspiration
             </li>
@@ -36,15 +36,15 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center px-8 my-2 gap-4">
-        <div className="flex justify-start items-center gap-1 text-[0.7rem] text-gray-400  bg-gray-100 rounded-md px-2 w-28 h-8">
+      <div className="flex justify-center items-center pr-2 lg:pr-8 my-2 gap-4">
+        <div className="flex justify-start items-center gap-1 text-[0.7rem] text-gray-400  bg-gray-100 rounded-md px-2 w-10 md:w-28 h-8">
           <img
             className="size-5 cursor-pointer"
             src="/search.svg"
             alt="search icon"
           />
           <input
-            className="customInputLocation h-full w-full bg-transparent outline-none "
+            className="customInputLocation h-full w-full bg-transparent outline-none hidden md:inline-block "
             type="text"
             name="search"
             id="search"
@@ -59,7 +59,7 @@ export default function Navbar() {
           />
         </div>
         <div className="size-9">
-          {user ? (
+          {user.image ? (
             <img
               className="size-9  rounded-full cursor-pointer"
               src={user.image}

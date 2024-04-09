@@ -41,7 +41,7 @@ export default function Profile() {
       }}
     >
       <h1 className="sacramento pt-7 pl-10 pb-3 text-pink-500 ">dribble</h1>
-      <div className="flex flex-col  items-start sm:w-[30rem] p-4 sm:p-0 text-wrap sm:self-center">
+      <div className="flex flex-col  items-start sm:w-[30rem] p-6  text-wrap sm:self-center">
         <div>
           <h1 className="text-[1.6rem] font-extrabold mb-2 tracking-tight">
             {" "}

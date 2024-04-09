@@ -16,7 +16,7 @@ export default function Purpose() {
 
   return (
     <div
-      className="h-screen flex flex-col "
+      className="min-h-screen w-full flex flex-col "
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === "Enter" && optionSelected) {
@@ -26,7 +26,7 @@ export default function Purpose() {
       }}
     >
       <div className="flex items-center">
-        <h1 className="sacramento pt-7 pl-10 pb-3 text-pink-500 inline-block">
+        <h1 className="sacramento pt-5 pl-10 pb-2 text-pink-500 inline-block">
           dribble
         </h1>
         <button
@@ -38,7 +38,7 @@ export default function Purpose() {
           &lt;{" "}
         </button>
       </div>
-      <div className="flex flex-col items-center sm:w-[30rem] p-4 sm:p-0 text-nowrap sm:self-center z-10">
+      <div className="flex flex-col items-center w-full sm:w-[30rem] px-4  sm:text-nowrap sm:self-center z-10">
         <h1 className="text-[1.6rem] font-extrabold mb-2 tracking-tight">
           What brings you to Dribble?
         </h1>
@@ -47,7 +47,7 @@ export default function Purpose() {
           explore other options later.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-14">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-12 sm:gap-6 mt-14">
         <div
           className={`flex flex-col text-center border-2 ${
             option1 ? "border-pink-600" : "border-gray-200"
@@ -60,7 +60,7 @@ export default function Purpose() {
             className={`flex flex-col justify-center items-center
              `}
             style={{
-              transition: "transform 0.5s ease-out,",
+              transition: "transform 0.5s ease-in-out",
               transform: option1 ? "translateY(-2rem)" : "translateY(0)",
             }}
           >
@@ -73,7 +73,7 @@ export default function Purpose() {
               <p
                 className="text-[0.7rem] h-11 text-gray-500 mt-2 mb-2  tracking-tighter "
                 style={{
-                  transition: "opacity 0.5s",
+                  transition: "opacity 0.6s",
                   opacity: optionSelected ? 1 : 0,
                 }}
               >
@@ -103,7 +103,7 @@ export default function Purpose() {
             className={`flex flex-col justify-center items-center
              `}
             style={{
-              transition: "transform 0.5s ease-out,",
+              transition: "transform ",
               transform: option2 ? "translateY(-2rem)" : "translateY(0)",
             }}
           >
@@ -116,7 +116,7 @@ export default function Purpose() {
               <p
                 className="text-[0.7rem] h-11 text-gray-500 mt-2 mb-2  tracking-tighter "
                 style={{
-                  transition: "opacity 0.5s",
+                  transition: "opacity 0.6s",
                   opacity: optionSelected ? 1 : 0,
                 }}
               >
@@ -146,7 +146,7 @@ export default function Purpose() {
             className={`flex flex-col justify-center items-center
              `}
             style={{
-              transition: "transform 0.5s ease-out,",
+              transition: "transform 0.5s ease-in-out",
               transform: option3 ? "translateY(-2rem)" : "translateY(0)",
             }}
           >
@@ -158,7 +158,7 @@ export default function Purpose() {
               <p
                 className="text-[0.7rem] h-14 text-gray-500 mt-2 mb-2  tracking-tighter text-center "
                 style={{
-                  transition: "opacity 0.5s",
+                  transition: "opacity 0.6s",
                   opacity: optionSelected ? 1 : 0,
                 }}
               >
@@ -177,36 +177,38 @@ export default function Purpose() {
           </div>
         </div>
       </div>
-      <p
-        className="text-[0.8rem] font-bold self-center mt-4 "
-        style={{
-          transition: "opacity 0.5s",
-          opacity: optionSelected ? 1 : 0,
-        }}
-      >
-        {optionSelected ? "Anything else? You can select multiple" : ""}
-      </p>
-      <button
-        className={`  w-40 h-7 rounded-md self-center ${
-          optionSelected ? "mt-[0.8rem] bg-pink-500" : "mt-8 bg-[#f8b8d0]"
-        } text-white text-[0.8rem] `}
-        disabled={!optionSelected}
-        onClick={() => {
-          navigate("/verification");
-          setUser({ ...user, purpose: { option1, option2, option3 } });
-        }}
-      >
-        Finish
-      </button>
-      <p
-        className="text-[0.7rem] font-bold text-gray-400 self-center "
-        style={{
-          transition: "opacity 0.5s",
-          opacity: optionSelected ? 1 : 0,
-        }}
-      >
-        {optionSelected ? "or Press RETURN" : ""}
-      </p>
+      <div className="flex flex-col justify-center items-center mb-8 h-[8rem]">
+        <p
+          className="text-[0.8rem] font-bold self-center  "
+          style={{
+            transition: "opacity 0.6s",
+            opacity: optionSelected ? 1 : 0,
+          }}
+        >
+          {optionSelected ? "Anything else? You can select multiple" : ""}
+        </p>
+        <button
+          className={`  w-40 h-7 rounded-md self-center mb-2 ${
+            optionSelected ? "mt-4 bg-pink-500" : "mt-5 bg-[#f8b8d0]"
+          } text-white text-[0.8rem] `}
+          disabled={!optionSelected}
+          onClick={() => {
+            navigate("/verification");
+            setUser({ ...user, purpose: { option1, option2, option3 } });
+          }}
+        >
+          Finish
+        </button>
+        <p
+          className="text-[0.7rem] font-bold text-gray-400 self-center  "
+          style={{
+            transition: "opacity 0.6s",
+            opacity: optionSelected ? 1 : 0,
+          }}
+        >
+          {optionSelected ? "or Press RETURN" : ""}
+        </p>
+      </div>
     </div>
   );
 }

@@ -5,8 +5,8 @@ const Footer = () => {
   let shotsDribbled = 20501853;
 
   return (
-    <footer className="bg-gray-100 p-10">
-      <div className="container mx-auto flex  justify-between gap-8">
+    <footer className="bg-gray-100 p-10 ">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between gap-8">
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[22rem]  mx-1 my-6">
           <h1 className="sacramento text-2xl text-pink-500 mb-3">dribble</h1>
           <p className="text-[0.8rem]  text-gray-900 w-full mt-2">
@@ -116,12 +116,12 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center pt-8 px-8 mt-8 flex justify-between items-center border-gray-200 border-t-2">
+      <div className="text-center pt-8 px-8 mt-8 flex justify-between items-center flex-col sm:flex-row gap-4 border-gray-200 border-t-2">
         <h3 className="text-gray-500 text-sm">
           {" "}
           © {currentYear} Dribbble. All rights reserved.
         </h3>
-        <div className="flex items-center gap-1">
+        <div className="flex  items-center sm:gap-1">
           <h3 className="text-gray-500 text-sm">
             <span className="font-semibold text-black">
               {shotsDribbled.toLocaleString()}{" "}
