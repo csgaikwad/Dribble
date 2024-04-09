@@ -11,11 +11,9 @@ export default function Purpose() {
     option1 | option2 | option3 ? setSelected(true) : setSelected(false);
   }, [option1, option2, option3]);
 
-
-
   return (
     <div
-      className="h-screen flex flex-col"
+      className="h-screen flex flex-col "
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === "Enter" && optionSelected) {
@@ -36,7 +34,7 @@ export default function Purpose() {
           &lt;{" "}
         </button>
       </div>
-      <div className="flex flex-col items-center sm:w-[30rem] p-4 sm:p-0 text-nowrap sm:self-center">
+      <div className="flex flex-col items-center sm:w-[30rem] p-4 sm:p-0 text-nowrap sm:self-center z-10">
         <h1 className="text-[1.6rem] font-extrabold mb-2 tracking-tight">
           What brings you to Dribble?
         </h1>
@@ -49,81 +47,156 @@ export default function Purpose() {
         <div
           className={`flex flex-col text-center border-2 ${
             option1 ? "border-pink-600" : "border-gray-200"
-          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer`}
+          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer transition-all duration-500`}
           onClick={() => {
             setOption1(!option1);
           }}
         >
-          <img className="w-40 h-28" src="/1.png" alt="Option1" />
-          <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
-            I'm a designer looking to share my work
-          </h2>
-          <input
-            className="customInputRound"
-            type="checkbox"
-            name="options"
-            id="option1"
-            checked={option1}
-            onChange={() => setOption1(!option1)}
-          />
+          <div
+            className={`flex flex-col justify-center items-center
+             `}
+            style={{
+              transition: "transform 0.5s ease-out,",
+              transform: option1 ? "translateY(-2rem)" : "translateY(0)",
+            }}
+          >
+            {" "}
+            <img className="w-40 h-28" src="/1.png" alt="Option1" />
+            <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
+              I'm a designer looking to share my work
+            </h2>
+            {option1 && (
+              <p
+                className="text-[0.7rem] h-11 text-gray-500 mt-2 mb-2  tracking-tighter "
+                style={{
+                  transition: "opacity 0.5s",
+                  opacity: optionSelected ? 1 : 0,
+                }}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur, natus.asdfasdf sdfasdfasdf asdf asd
+              </p>
+            )}
+            <input
+              className="customInputRound"
+              type="checkbox"
+              name="options"
+              id="option1"
+              checked={option1}
+              onChange={() => setOption1(!option1)}
+            />
+          </div>
         </div>
         <div
           className={`flex flex-col text-center border-2 ${
             option2 ? "border-pink-600" : "border-gray-200"
-          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer`}
+          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer transition-all duration-500`}
           onClick={() => {
             setOption2(!option2);
           }}
         >
-          <img className="w-40 h-28" src="/2.png" alt="Option2" />
-          <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
-            I'm looking to hire a designer
-          </h2>
-          <input
-            className="customInputRound"
-            type="checkbox"
-            name="options"
-            id="option2"
-            checked={option2}
-            onChange={() => setOption2(!option2)}
-          />
+          <div
+            className={`flex flex-col justify-center items-center
+             `}
+            style={{
+              transition: "transform 0.5s ease-out,",
+              transform: option2 ? "translateY(-2rem)" : "translateY(0)",
+            }}
+          >
+            {" "}
+            <img className="w-40 h-28" src="/2.png" alt="Option2" />
+            <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
+              I'm looking to hire a designer
+            </h2>
+            {option2 && (
+              <p
+                className="text-[0.7rem] h-11 text-gray-500 mt-2 mb-2  tracking-tighter "
+                style={{
+                  transition: "opacity 0.5s",
+                  opacity: optionSelected ? 1 : 0,
+                }}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur, natus.asdfasdf sdfasdfasdf asdf asd
+              </p>
+            )}
+            <input
+              className="customInputRound"
+              type="checkbox"
+              name="options"
+              id="option2"
+              checked={option2}
+              onChange={() => setOption2(!option2)}
+            />
+          </div>
         </div>
         <div
           className={`flex flex-col text-center border-2 ${
             option3 ? "border-pink-600" : "border-gray-200"
-          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer`}
+          } w-56 h-60 rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer transition-all duration-500`}
           onClick={() => {
             setOption3(!option3);
           }}
         >
-          <img className="w-40 h-28" src="/3.png" alt="Option3" />
-          <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6">
-            I'm looking for design inspiration
-          </h2>
-
-          <input
-            className="customInputRound"
-            type="checkbox"
-            name="options"
-            id="option3"
-            checked={option3}
-            onChange={() => setOption3(!option3)}
-          />
+          <div
+            className={`flex flex-col justify-center items-center
+             `}
+            style={{
+              transition: "transform 0.5s ease-out,",
+              transform: option3 ? "translateY(-2rem)" : "translateY(0)",
+            }}
+          >
+            <img className="w-40 h-28 " src="/3.png" alt="Option3" />
+            <h2 className="text-20  mt-4 font-extrabold tracking-tighter leading-6 ">
+              I'm looking for design inspiration
+            </h2>
+            {option3 && (
+              <p
+                className="text-[0.7rem] h-14 text-gray-500 mt-2 mb-2  tracking-tighter text-center "
+                style={{
+                  transition: "opacity 0.5s",
+                  opacity: optionSelected ? 1 : 0,
+                }}
+              >
+                With over 7 million shots from a vast community of designers, Dribble is the leading source for design inspiration.
+              </p>
+            )}
+            <input
+              className="customInputRound "
+              type="checkbox"
+              name="options"
+              id="option3"
+              checked={option3}
+              onChange={() => setOption3(!option3)}
+            />
+          </div>
         </div>
       </div>
-      <p className="text-[0.8rem] font-bold self-center mt-4 ">
+      <p
+        className="text-[0.8rem] font-bold self-center mt-4 "
+        style={{
+          transition: "opacity 0.5s",
+          opacity: optionSelected ? 1 : 0,
+        }}
+      >
         {optionSelected ? "Anything else? You can select multiple" : ""}
       </p>
       <button
         className={`  w-40 h-7 rounded-md self-center ${
           optionSelected ? "mt-[0.8rem] bg-pink-500" : "mt-8 bg-[#f8b8d0]"
-        } text-white text-[0.8rem]`}
+        } text-white text-[0.8rem] `}
         disabled={!optionSelected}
         onClick={() => navigate("/verification")}
       >
         Finish
       </button>
-      <p className="text-[0.7rem] font-bold text-gray-400 self-center">
+      <p
+        className="text-[0.7rem] font-bold text-gray-400 self-center "
+        style={{
+          transition: "opacity 0.5s",
+          opacity: optionSelected ? 1 : 0,
+        }}
+      >
         {optionSelected ? "or Press RETURN" : ""}
       </p>
     </div>
