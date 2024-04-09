@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SignupImg() {
   return (
-    <div className="sm:h-screen overflow-hidden">
+    <div className="h-screen ">
       <div className="  bg-[#f2d184] h-[9rem] w-[28rem] px-[3rem] pt-[2rem] leading-[1.5rem] ">
         <motion.h1
           initial={{ x: "-50vw" }}
@@ -24,7 +24,7 @@ export default function SignupImg() {
           </p>
         </motion.div>
       </div>
-      <div className="relative pb-2">
+      <div className="relative">
         <img className=" h-[26rem] w-[28rem]" src="/landingImg.png" alt="img" />
         <motion.p
           initial={{ x: "-50vw" }}
@@ -34,6 +34,7 @@ export default function SignupImg() {
           Art by <span className="underline">Peter Tarka</span>
         </motion.p>
       </div>
+      <div className="h-[39%] bg-[#f2d184]  w-[28rem]"></div>
     </div>
   );
 }
