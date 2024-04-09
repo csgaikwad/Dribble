@@ -1,9 +1,7 @@
-/* src/styles.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Checkbox Styles */
 .customInput {
   appearance: none;
   -webkit-appearance: none;
@@ -20,10 +18,6 @@
   background-color: #ea4b8b;
 }
 
-
-
-
-
 .customInputRound {
   appearance: none;
   -webkit-appearance: none;
@@ -36,7 +30,7 @@
   height: 1.4em;
   cursor: pointer;
   position: relative;
-  margin-top:4px;
+  margin-top: 4px;
 }
 
 .customInputRound:checked {
@@ -45,10 +39,10 @@
 }
 
 .customInputRound::after {
-  content:"";
+  content: "";
   position: absolute;
   top: 5%;
-  left:30%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: 0.5em;
   height: 0.9em;
@@ -62,20 +56,14 @@
   opacity: 1;
 }
 
-
-
-
-
-
-
-label{
-    @apply pl-2 font-extrabold tracking-tight text-[0.9rem] mt-4;
+label {
+  @apply pl-2 font-extrabold tracking-tight text-[0.9rem] mt-4;
 }
 
 /* Other Styles */
 .sacramento {
   font-family: "Sacramento";
-  @apply text-[2rem] tracking-wide font-semibold ;
+  @apply text-[2rem] tracking-wide font-semibold;
 }
 
 .roboto {
@@ -87,11 +75,9 @@ input:not([type="checkbox"]):not([type="file"]):not(.customInputLocation) {
   @apply bg-gray-100 h-8 rounded-md px-4 m-1 outline-none text-[0.8rem] font-sans font-semibold;
 }
 
-
 span {
   @apply cursor-pointer;
 }
-
 
 @keyframes heartbeat {
   0% {
@@ -108,8 +94,8 @@ span {
 .heartbeat {
   animation: heartbeat 3s infinite;
 }
-.linearGradient{
-  background:linear-gradient(180deg,#00dbde,#fc00ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+.linearGradient {
+  background: linear-gradient(180deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

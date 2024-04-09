@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useRecoilState } from "recoil";
+import { UserAtom } from "../atoms/UserAtom";
 // import Swal from "sweetalert2";
 
 export default function SignupPart() {
@@ -13,6 +15,7 @@ export default function SignupPart() {
   const [btnEnabled, setBtnEnabled] = useState(false);
   const navigate = useNavigate();
 
+  const [user,setUser]=useRecoilState(UserAtom);
   useEffect(() => {
     name && username && email && password && checked
       ? setBtnEnabled(true)
@@ -41,6 +44,7 @@ export default function SignupPart() {
           setTimeout(() => {
             navigate("/profile");
           }, 1500);
+          setUser({ ...user, name, username, email });
         }}
       >
         <h1

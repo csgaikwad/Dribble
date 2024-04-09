@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Camera from "./subComponents/Camera.jsx";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { UserAtom } from "./atoms/UserAtom.jsx";
 
 export default function Profile() {
   const navigate = useNavigate();
   const [uploadedImg, setUploadedImg] = useState("");
   const [location, setlocation] = useState("");
+  const [user, setUser] = useRecoilState(UserAtom);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -14,6 +17,7 @@ export default function Profile() {
     reader.onload = () => {
       setUploadedImg(reader.result);
     };
+    console.log(reader.result);
 
     if (file) {
       reader.readAsDataURL(file);
@@ -22,6 +26,8 @@ export default function Profile() {
 
   function handleButtonClick() {
     uploadedImg && location && navigate("/purpose");
+    setUser({ ...user, image: uploadedImg ,location });
+
   }
 
   return (
@@ -29,8 +35,7 @@ export default function Profile() {
       className="h-screen  flex flex-col"
       tabIndex={0}
       onKeyDown={(e) => {
-        console.log(e.key)
-        if (e.key === "Enter" && uploadedImg && location ) {
+        if (e.key === "Enter" && uploadedImg && location) {
           handleButtonClick();
         }
       }}

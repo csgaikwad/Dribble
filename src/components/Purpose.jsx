@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { UserAtom } from "./atoms/UserAtom";
 
 export default function Purpose() {
   const navigate = useNavigate();
@@ -7,6 +9,7 @@ export default function Purpose() {
   const [option2, setOption2] = useState(false);
   const [option3, setOption3] = useState(false);
   const [optionSelected, setSelected] = useState(false);
+  const [user, setUser] = useRecoilState(UserAtom);
   useEffect(() => {
     option1 | option2 | option3 ? setSelected(true) : setSelected(false);
   }, [option1, option2, option3]);
@@ -18,6 +21,7 @@ export default function Purpose() {
       onKeyDown={(e) => {
         if (e.key === "Enter" && optionSelected) {
           navigate("/verification");
+          setUser({ ...user, option1, option2, option3 });
         }
       }}
     >
@@ -158,7 +162,8 @@ export default function Purpose() {
                   opacity: optionSelected ? 1 : 0,
                 }}
               >
-                With over 7 million shots from a vast community of designers, Dribble is the leading source for design inspiration.
+                With over 7 million shots from a vast community of designers,
+                Dribble is the leading source for design inspiration.
               </p>
             )}
             <input
@@ -186,7 +191,10 @@ export default function Purpose() {
           optionSelected ? "mt-[0.8rem] bg-pink-500" : "mt-8 bg-[#f8b8d0]"
         } text-white text-[0.8rem] `}
         disabled={!optionSelected}
-        onClick={() => navigate("/verification")}
+        onClick={() => {
+          navigate("/verification");
+          setUser({ ...user, purpose: { option1, option2, option3 } });
+        }}
       >
         Finish
       </button>

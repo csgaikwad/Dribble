@@ -71,13 +71,13 @@ function App() {
           element={
             <motion.div
               key="purpose"
-              initial={{  x: "-100%" }}
+              initial={{ x: "-100%" }}
               animate={{
                 x: "0",
                 transition: { duration: 0.5 },
               }}
               exit={{
-                x: "100%",
+                y: "100%",
                 transition: { duration: 0.5 },
               }}
             >
@@ -90,13 +90,14 @@ function App() {
           element={
             <motion.div
               key="purpose"
-              initial={{  y: "-100%" }}
+              initial={{ y: "-100%" }}
               animate={{
                 y: "0",
                 transition: { duration: 0.5 },
               }}
               exit={{
-                x: "100%",
+                opacity: 0,
+                scale: 0.5,
                 transition: { duration: 0.5 },
               }}
             >
