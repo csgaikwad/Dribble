@@ -2,7 +2,7 @@ import React from "react";
 
 export default function EmailVerification() {
   return (
-    <div className="h-[25rem] w-screen md:w-[43rem] m-auto mt-20 flex flex-col items-center justify-center md:justify-start text-center overflow-hidden">
+    <div className="h-screen md:h-[25rem] w-screen md:w-[43rem] m-auto mt-20 flex flex-col items-center justify-center md:justify-start text-center overflow-hidden">
       <h1 className="text-[2rem] font-semibold tracking-tighter font-sans">
         Please verify your email...
       </h1>

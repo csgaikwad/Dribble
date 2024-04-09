@@ -60,7 +60,7 @@ export default function Purpose() {
             className={`flex flex-col justify-center items-center
              `}
             style={{
-              transition: "transform 0.5s ease-in-out",
+              transition: "transform ",
               transform: option1 ? "translateY(-2rem)" : "translateY(0)",
             }}
           >
@@ -146,7 +146,7 @@ export default function Purpose() {
             className={`flex flex-col justify-center items-center
              `}
             style={{
-              transition: "transform 0.5s ease-in-out",
+              transition: "transform ",
               transform: option3 ? "translateY(-2rem)" : "translateY(0)",
             }}
           >
