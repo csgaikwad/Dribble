@@ -26,7 +26,7 @@ export default function Purpose() {
         }
       }}
     >
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-1">
         <h1 className="sacramento pt-5 pl-10 pb-2 text-pink-500 inline-block">
           dribble
         </h1>
@@ -40,15 +40,15 @@ export default function Purpose() {
         </button>
       </div>
       <div className="flex flex-col items-center w-full sm:w-[40rem] px-4  sm:text-nowrap sm:self-center z-10">
-        <h1 className="text-[2.6rem] font-bold mb-2 tracking-tight font-sans">
+        <h1 className="text-[2.4rem] font-bold mb-2 tracking-tight font-sans">
           What brings you to Dribble?
         </h1>
-        <p className="text-gray-500 text-[1.1rem] tracking-tight">
+        <p className="text-gray-500 text-[1rem] tracking-tight">
           Select the options that best describe you. Don't worry, you can
           explore other options later.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-24 sm:gap-10 mt-28 mb-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-24 sm:gap-10 mt-24 mb-11">
         <PurposeTile
           option={option1}
           setoption={setOption1}
@@ -80,7 +80,7 @@ export default function Purpose() {
           }
         />
       </div>
-      <div className="flex flex-col justify-center items-center mb-6 h-[8rem]">
+      <div className="flex flex-col justify-center items-center  h-[8rem]">
         <p
           className="text-[1rem] font-bold self-center tracking-tight "
           style={{
@@ -103,7 +103,7 @@ export default function Purpose() {
           Finish
         </button>
         <p
-          className="text-[0.9rem] font-bold text-gray-400 self-center  "
+          className="text-[0.8rem] font-bold text-gray-400 self-center  "
           style={{
             transition: "opacity 0.6s",
             opacity: optionSelected ? 1 : 0,

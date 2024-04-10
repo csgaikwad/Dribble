@@ -40,7 +40,7 @@ export default function Profile() {
         }
       }}
     >
-      <h1 className="sacramento pt-7 pl-10 pb-3 text-pink-500 ">dribble</h1>
+      <h1 className="sacramento pt-6 pl-12 pb-3 text-pink-500 ">dribble</h1>
       <div className="flex flex-col  items-start  lg:w-1/2 p-6  text-wrap sm:self-center">
         <div>
           <h1 className="text-[1.8rem] md:text-[2.2rem] font-extrabold mb-2 tracking-tight">
@@ -58,7 +58,7 @@ export default function Profile() {
           <div className="sm:float-left mr-8 mb-5 mt-4 ">
             {uploadedImg ? (
               <img
-                className=" rounded-full size-48 "
+                className=" rounded-full size-40 "
                 src={uploadedImg}
                 alt="profile"
               />
@@ -92,27 +92,27 @@ export default function Profile() {
           type="text"
           name="location"
           placeholder="Enter a location"
-          className="customInputLocation  h-10   my-4 pb-2 pl-1 outline-none text-[1.2rem] font-sans font-semibold border-b-2 w-full"
+          className="customInputLocation  h-10 my-4 pb-2 pl-1 outline-none text-[1.2rem] font-sans font-semibold border-b-2 w-full"
           value={location}
           onChange={(e) => {
             setlocation(e.target.value);
           }}
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <button
             className={`${
               uploadedImg && location
-                ? "bg-[#EA4B8B] text-[1rem]"
+                ? "bg-[#EA4B8B] text-[0.9rem]"
                 : "bg-pink-300 text-[1rem] "
             }
-            h-10 text-white rounded-lg w-52 mt-10  `}
+            h-9 text-white rounded-lg w-52 mt-10   `}
             disabled={!uploadedImg || !location}
             onClick={handleButtonClick}
           >
             Next
           </button>
           {uploadedImg && location && (
-            <p className="text-gray-500 text-[0.9rem] self-center mt-1">
+            <p className="text-gray-400 font-semibold tracking-tight leading-tight text-[0.8rem] self-center">
               or Press RETURN
             </p>
           )}

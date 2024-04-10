@@ -6,7 +6,7 @@ export default function PurposeTile(props) {
     <div
       className={`flex flex-col text-center border-2 ${
         props.option ? "border-pink-600" : "border-gray-200"
-      } size-[20rem] rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer transition-all duration-500`}
+      } size-[18rem] rounded-xl pt-6 pb-4 text-wrap items-center justify-center cursor-pointer transition-all duration-500`}
       onClick={() => {
         props.setoption(!props.option);
       }}
@@ -16,17 +16,17 @@ export default function PurposeTile(props) {
        `}
         style={{
           transition: "transform ",
-          transform: props.option ? "translateY(-4rem)" : "translateY(0)",
+          transform: props.option ? "translateY(-3rem)" : "translateY(0)",
         }}
       >
         {" "}
         <img className="w-60 h-32" src={props.image} alt="options" />
-        <h2 className="text-2xl  mt-4 font-extrabold tracking-tighter leading-6">
+        <h2 className="text-xl w-[80%] mt-4 font-extrabold tracking-tighter leading-6">
           {props.heading}
         </h2>
         {props.option && (
           <p
-            className="text-[1rem]  w-[16rem]  h-14 text-gray-500 mt-4 mb-12  tracking-tighter "
+            className="text-[1rem]  w-[16rem]  h-14 text-gray-500 mt-4 mb-7 leading-snug  tracking-tighter "
             style={{
               transition: "opacity 0.6s",
               opacity: props.optionselected ? 1 : 0,
