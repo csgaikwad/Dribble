@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { UserAtom } from "../atoms/UserAtom";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const user = useRecoilValue(UserAtom);
+  const [showMenu, setMenu] = useState(false);
   const navigate = useNavigate();
   return (
     <div className="flex  justify-between border-b-2 border-gray-100 h-auto ">
@@ -16,6 +17,7 @@ export default function Navbar() {
         >
           dribble
         </h1>
+
         <div>
           <ul className="hidden md:flex gap-8  justify-center items-center text-[1rem] text-gray-500">
             <li className="font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
@@ -69,9 +71,37 @@ export default function Navbar() {
             <div className="size-12 rounded-full bg-gray-200 cursor-pointer"></div>
           )}
         </div>
-        <button className="text-white text-[1rem] text-center bg-[#EA4B8B] p-2 px-4 rounded-lg">
+        <button className="hidden md:inline-block text-white text-[1rem] text-center bg-[#EA4B8B] p-2 px-4 rounded-lg">
           Upload
         </button>
+        <div onClick={() => setMenu(!showMenu)}>
+          <img
+            className={`md:hidden size-8 text-gray-500 cursor-pointer transition-all duration-500
+            ${showMenu && "hover:rotate-180 hover:scale-110"}
+            `}
+            src="/hamburger.svg"
+            alt="menu"
+          />
+          <div className="md:hidden relative  " hidden={!showMenu}>
+            <ul className="flex flex-col gap-1 justify-start items-start text-[1rem] text-gray-500 border-2 w-min rounded-lg bg-gray-50 p-4 text-nowrap absolute right-[-30%] top-5">
+              <li className="border-b-2 font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
+                Inspiration
+              </li>
+              <li className="border-b-2 font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
+                Find Work
+              </li>
+              <li className="border-b-2 font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
+                Learn Design
+              </li>
+              <li className="border-b-2 font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
+                Go Pro
+              </li>
+              <li className="border-b-2 font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
+                Hire Designers
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

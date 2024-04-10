@@ -6,17 +6,38 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-
+  outline:none;
   border: 1.5px solid lightgray;
   border-radius: 1px;
   background-color: transparent;
-  @apply cursor-pointer size-6 px-2;
+  @apply cursor-pointer relative size-6 px-2;
 }
 
 .customInput:checked {
   border: 1.5px solid #ea4b8b;
   background-color: #ea4b8b;
 }
+
+
+.customInput::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  width: 0.5em;
+  height: 0.9em;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.customInput:checked::after {
+  opacity: 1;
+}
+
+
 
 .customInputRound {
   appearance: none;
@@ -106,12 +127,12 @@ html {
 
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0.8rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  @apply bg-pink-400;
+  @apply bg-pink-300;
 }
 
 ::-webkit-scrollbar-track {
