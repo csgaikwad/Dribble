@@ -48,7 +48,7 @@ export default function Purpose() {
           explore other options later.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 sm:gap-10 mt-28 mb-12">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-24 sm:gap-10 mt-28 mb-12">
         <PurposeTile
           option={option1}
           setoption={setOption1}
