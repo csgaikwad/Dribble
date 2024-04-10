@@ -26,8 +26,7 @@ export default function Profile() {
 
   function handleButtonClick() {
     uploadedImg && location && navigate("/purpose");
-    setUser({ ...user, image: uploadedImg ,location });
-
+    setUser({ ...user, image: uploadedImg, location });
   }
 
   return (
@@ -40,7 +39,12 @@ export default function Profile() {
         }
       }}
     >
-      <h1 className="sacramento pt-6 pl-12 pb-3 text-[#EA4B8B] ">dribble</h1>
+      <h1
+        className="sacramento pt-6 pl-12 pb-3 text-[#EA4B8B] cursor-pointer  "
+        onClick={() => navigate("/")}
+      >
+        dribble
+      </h1>
       <div className="flex flex-col  items-start  lg:w-1/2 p-6  text-wrap sm:self-center">
         <div>
           <h1 className="text-[1.8rem] md:text-[2.2rem] font-extrabold mb-2 tracking-tight">
@@ -87,7 +91,9 @@ export default function Profile() {
             </p>
           </div>
         </div>
-        <label className="text-[1.3rem] tracking-tighter">Add your location</label>
+        <label className="text-[1.3rem] tracking-tighter">
+          Add your location
+        </label>
         <input
           type="text"
           name="location"

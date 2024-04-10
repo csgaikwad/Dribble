@@ -77,7 +77,7 @@ function App() {
                 transition: { duration: 0.5 },
               }}
               exit={{
-                y: "100%",
+                y: "-100%",
                 transition: { duration: 0.5 },
               }}
             >
@@ -90,7 +90,7 @@ function App() {
           element={
             <motion.div
               key="purpose"
-              initial={{ y: "-100%" }}
+              initial={{ y: "100%" }}
               animate={{
                 y: "0",
                 transition: { duration: 0.5 },

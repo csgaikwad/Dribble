@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate=useNavigate();
   let currentYear = new Date().getFullYear();
   let shotsDribbled = 20501853;
 
@@ -8,7 +10,12 @@ const Footer = () => {
     <footer className="bg-gray-100 p-10 ">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between gap-8">
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[24rem]  mx-1 my-6">
-          <h1 className="sacramento text-2xl text-[#EA4B8B] mb-3">dribble</h1>
+          <h1
+            className="sacramento text-2xl text-[#EA4B8B] mb-3 cursor-pointer "
+            onClick={() => navigate("/")}
+          >
+            dribble
+          </h1>
           <p className="text-[1rem]  text-gray-900 w-full mt-2">
             Dribbble is the world's leading community for creatives to share,
             grow, and get hired.
@@ -128,7 +135,11 @@ const Footer = () => {
             </span>{" "}
             shots dribbled
           </h3>
-          <img  className="size-5 rounded-full  " src="/basketballPink.svg" alt="Dribble" />
+          <img
+            className="size-5 rounded-full  "
+            src="/basketballPink.svg"
+            alt="Dribble"
+          />
         </div>
       </div>
     </footer>

@@ -27,7 +27,10 @@ export default function Purpose() {
       }}
     >
       <div className="flex items-center mb-1">
-        <h1 className="sacramento pt-5 pl-10 pb-2 text-[#EA4B8B] inline-block">
+        <h1
+          className="sacramento pt-5 pl-10 pb-2 text-[#EA4B8B] inline-block cursor-pointer "
+          onClick={() => navigate("/")}
+        >
           dribble
         </h1>
         <button

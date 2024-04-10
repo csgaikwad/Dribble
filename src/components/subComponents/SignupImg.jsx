@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SignupImg() {
+  const navigate=useNavigate();
   return (
     <div className="h-full w-full bg-[#f2d184] mb-40 md:mb-0">
-      <div className="  bg-[#f2d184] h-[40%] md:h-[20%]  w-full px-[4rem] pt-[4rem] leading-[1.5rem] z-50 relative ">
+      <div className="  bg-[#f2d184] h-[40%] md:h-[20%]  w-full px-[4rem] pt-[4rem] leading-[1.5rem] z-50 relative  ">
         <motion.h1
           initial={{ x: "-50vw" }}
           animate={{ x: "0vw", transition: { duration: 1 } }}
-          className="text-[#A78339] sacramento   "
+          className="text-[#A78339] sacramento cursor-pointer "
+          onClick={() => navigate("/")}
+
         >
           dribble
         </motion.h1>
