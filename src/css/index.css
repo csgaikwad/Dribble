@@ -63,16 +63,16 @@ label {
 /* Other Styles */
 .sacramento {
   font-family: "Sacramento";
-  @apply text-[2rem] tracking-wide font-semibold;
+  @apply text-[2.5rem] tracking-wide font-semibold;
 }
 
 .roboto {
   font-family: "Roboto";
-  @apply text-[1.5rem];
+  @apply text-[1.8rem] font-extrabold;
 }
 
 input:not([type="checkbox"]):not([type="file"]):not(.customInputLocation) {
-  @apply bg-gray-100 h-8 rounded-md px-4 m-1 outline-none text-[0.8rem] font-sans font-semibold;
+  @apply bg-gray-100 h-10 rounded-md px-4 m-1 outline-none text-[0.8rem] font-sans font-semibold;
 }
 
 span {

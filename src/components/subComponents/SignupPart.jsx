@@ -22,9 +22,9 @@ export default function SignupPart() {
       : setBtnEnabled(false);
   }, [name, username, email, password, checked]);
   return (
-    <div className="w-[24rem] h-full p-4 ">
+    <div className="w-full md:w-[50%] h-full p-4 m-auto mt-14 ">
       <ToastContainer position="top-right" autoClose={1000} />
-      <p className="text-[0.7rem] m-1 absolute right-4 top-4">
+      <p className="text-[0.8rem] m-1 absolute right-4 top-4">
         Already a member?{" "}
         <span className="text-[#5746AD] font-semibold ">Sign in</span>
       </p>
@@ -48,7 +48,7 @@ export default function SignupPart() {
         }}
       >
         <h1
-          className={`text-[1.3rem] font-bold tracking-tighter ${
+          className={`text-[1.7rem] font-bold tracking-tighter ${
             !username && "mb-6"
           }`}
         >
