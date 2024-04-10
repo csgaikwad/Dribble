@@ -41,24 +41,24 @@ export default function Profile() {
       }}
     >
       <h1 className="sacramento pt-7 pl-10 pb-3 text-pink-500 ">dribble</h1>
-      <div className="flex flex-col  items-start sm:w-[30rem] p-6  text-wrap sm:self-center">
+      <div className="flex flex-col  items-start  lg:w-1/2 p-6  text-wrap sm:self-center">
         <div>
-          <h1 className="text-[1.6rem] font-extrabold mb-2 tracking-tight">
+          <h1 className="text-[1.8rem] md:text-[2.2rem] font-extrabold mb-2 tracking-tight">
             {" "}
             Welcome! Let's create your profile
           </h1>
-          <p className="text-gray-500 text-[0.7rem] ">
+          <p className="text-gray-500 text-[1rem] ">
             Let others get to know you better! You can do these later
           </p>
         </div>
         <div className="w-full mt-2">
-          <h1 className=" font-extrabold mt-4 tracking-tighter">
+          <h1 className=" font-extrabold text-[1.4rem] mt-10 tracking-tighter">
             Add an avatar
           </h1>
           <div className="sm:float-left mr-8 mb-5 mt-4 ">
             {uploadedImg ? (
               <img
-                className=" rounded-full size-36 "
+                className=" rounded-full size-48 "
                 src={uploadedImg}
                 alt="profile"
               />
@@ -71,7 +71,7 @@ export default function Profile() {
           <div className="mt-8">
             <label
               htmlFor="fileInput"
-              className="font-semibold p-2 text-[0.8rem] border-2 rounded-md cursor-pointer  "
+              className="font-semibold px-4 py-2 text-[1rem]  border-2 rounded-md cursor-pointer  "
             >
               Choose image
             </label>
@@ -82,17 +82,17 @@ export default function Profile() {
               onChange={handleImageChange}
               className="hidden m-0 p-0"
             />
-            <p className="my-4 text-gray-400 text-[0.7rem] leading-tighter">
+            <p className="my-10 text-gray-400 text-[1rem] leading-tighter">
               &gt; Or choose one of our defaults
             </p>
           </div>
         </div>
-        <label>Add your location</label>
+        <label className="text-[1.3rem] tracking-tighter">Add your location</label>
         <input
           type="text"
           name="location"
           placeholder="Enter a location"
-          className="customInputLocation  h-8   m-1 outline-none text-[0.8rem] font-sans font-semibold border-b-2 w-full"
+          className="customInputLocation  h-10   my-4 pb-2 pl-1 outline-none text-[1.2rem] font-sans font-semibold border-b-2 w-full"
           value={location}
           onChange={(e) => {
             setlocation(e.target.value);
@@ -102,17 +102,17 @@ export default function Profile() {
           <button
             className={`${
               uploadedImg && location
-                ? "bg-[#EA4B8B] text-[0.8rem]"
-                : "bg-pink-300 text-[0.8rem] "
+                ? "bg-[#EA4B8B] text-[1rem]"
+                : "bg-pink-300 text-[1rem] "
             }
-            h-7 text-white rounded-lg w-40 mt-7  `}
+            h-10 text-white rounded-lg w-52 mt-10  `}
             disabled={!uploadedImg || !location}
             onClick={handleButtonClick}
           >
             Next
           </button>
           {uploadedImg && location && (
-            <p className="text-gray-500 text-[0.7rem] self-center mt-1">
+            <p className="text-gray-500 text-[0.9rem] self-center mt-1">
               or Press RETURN
             </p>
           )}

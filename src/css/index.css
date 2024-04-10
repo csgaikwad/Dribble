@@ -10,7 +10,7 @@
   border: 1.5px solid lightgray;
   border-radius: 1px;
   background-color: transparent;
-  @apply cursor-pointer size-5 px-2;
+  @apply cursor-pointer size-6 px-2;
 }
 
 .customInput:checked {
@@ -26,23 +26,23 @@
   border: 1.5px solid lightgray;
   border-radius: 50%;
   background-color: transparent;
-  width: 1.4em;
-  height: 1.4em;
+  width: 1.6em;
+  height: 1.6em;
   cursor: pointer;
   position: relative;
-  margin-top: 4px;
+  margin-top: 15px;
 }
 
 .customInputRound:checked {
-  border: 1.5px solid #ea4b8b;
+  border: 1.7px solid #ea4b8b;
   background-color: #ea4b8b;
 }
 
 .customInputRound::after {
   content: "";
   position: absolute;
-  top: 5%;
-  left: 30%;
+  top: 10%;
+  left: 35%;
   transform: translate(-50%, -50%);
   width: 0.5em;
   height: 0.9em;
@@ -57,7 +57,7 @@
 }
 
 label {
-  @apply pl-2 font-extrabold tracking-tight text-[0.9rem] mt-4;
+  @apply pl-2 font-extrabold tracking-tighter text-[1.1rem] mt-8;
 }
 
 /* Other Styles */
@@ -72,7 +72,7 @@ label {
 }
 
 input:not([type="checkbox"]):not([type="file"]):not(.customInputLocation) {
-  @apply bg-gray-100 h-10 rounded-md px-4 m-1 outline-none text-[0.8rem] font-sans font-semibold;
+  @apply bg-gray-100 h-10 rounded-md px-4 m-1 outline-none text-[1rem] font-sans font-semibold;
 }
 
 span {
@@ -102,7 +102,7 @@ span {
 
 html {
   scroll-behavior: smooth;
-  /* overflow-x:hidden; */
+  overflow-x:hidden;
 
 }
 ::-webkit-scrollbar {

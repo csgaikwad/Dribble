@@ -10,9 +10,9 @@ export default function Home() {
         navigate("/signup");
       }}
     >
-          <h1 className="heartbeat linearGradient font-serif text-center w-1/2 z-10 absolute top-20 text-[2rem]  underline">Welcome, Click here to create an account</h1>
+          <h1 className="heartbeat linearGradient font-serif text-center w-1/2 z-10 absolute top-20 text-[2.2rem]  underline">Welcome, Click here to create an account</h1>
         <img
-          className="w-screen md:h-[30rem] md:w-auto  cursor-pointer md:z-0 "
+          className="w-screen md:h-[90%] md:w-auto  cursor-pointer md:z-0 "
           src="/landingImg.png"
           alt="landingImage"
         />

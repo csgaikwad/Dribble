@@ -7,35 +7,35 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 p-10 ">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between gap-8">
-        <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[22rem]  mx-1 my-6">
+        <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[24rem]  mx-1 my-6">
           <h1 className="sacramento text-2xl text-pink-500 mb-3">dribble</h1>
-          <p className="text-[0.8rem]  text-gray-900 w-full mt-2">
+          <p className="text-[1rem]  text-gray-900 w-full mt-2">
             Dribbble is the world's leading community for creatives to share,
             grow, and get hired.
           </p>
           <div className="flex gap-4 mt-6 items-center justify-start">
             <img
-              className="size-4 text-gray-400 transition duration-300 hover:scale-125 cursor-pointer"
+              className="size-6  transition duration-300 hover:scale-125 cursor-pointer"
               src="/basketball.svg"
               alt="Dribble"
             />
             <img
-              className="size-4 text-gray-400 transition duration-300 hover:scale-125 cursor-pointer"
+              className="size-6  transition duration-300 hover:scale-125 cursor-pointer"
               src="/twitter.svg"
               alt="twitter"
             />
             <img
-              className="size-6  text-gray-400 transition duration-300 hover:scale-125 cursor-pointer"
+              className="size-6  transition duration-300 hover:scale-125 cursor-pointer"
               src="/facebook.svg"
               alt="facebook"
             />
             <img
-              className="size-4 text-gray-400 transition duration-300 hover:scale-125 cursor-pointer"
+              className="size-6  transition duration-300 hover:scale-125 cursor-pointer"
               src="/instagram.svg"
               alt="instagram"
             />
             <img
-              className="size-4 text-gray-400 transition duration-300 hover:scale-125 cursor-pointer"
+              className="size-6  transition duration-300 hover:scale-125 cursor-pointer"
               src="/pinterest.svg"
               alt="pinterest"
             />
@@ -43,8 +43,8 @@ const Footer = () => {
         </div>
 
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-1/6 mx-1 my-2 ">
-          <h2 className="font-semibold my-4 text-sm">For Designers</h2>
-          <ul className="list-item text-sm">
+          <h2 className="font-semibold my-4 text-lg">For Designers</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">Go Pro!</li>
             <li className="my-2 text-gray-800 ">Explore design work</li>
             <li className="my-2 text-gray-800 ">Design blog</li>
@@ -57,21 +57,21 @@ const Footer = () => {
         </div>
 
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-1/6 mx-1 my-2 ">
-          <h2 className="font-semibold my-4 text-sm">Hire Designers</h2>
-          <ul className="list-item text-sm">
+          <h2 className="font-semibold my-4 text-lg">Hire Designers</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">Post a job opening</li>
             <li className="my-2 text-gray-800 ">Post a freelance project</li>
             <li className="my-2 text-gray-800 ">Search for designers</li>
           </ul>
-          <h2 className=" font-semibold my-4 text-sm">Brands</h2>
-          <ul className="list-item text-sm">
+          <h2 className=" font-semibold my-4 text-lg">Brands</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">Advertise with us</li>
           </ul>
         </div>
 
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-1/6 mx-1 my-2 ">
-          <h2 className="font-semibold my-4 text-sm">Company</h2>
-          <ul className="list-item text-sm">
+          <h2 className="font-semibold my-4 text-lg">Company</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">About</li>
             <li className="my-2 text-gray-800 ">Careers</li>
             <li className="my-2 text-gray-800 ">Support</li>
@@ -85,8 +85,8 @@ const Footer = () => {
         </div>
 
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[13rem] mx-1 my-2  ">
-          <h2 className="font-semibold my-4 text-sm">Directories</h2>
-          <ul className="list-item text-sm">
+          <h2 className="font-semibold my-4 text-lg">Directories</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">Design jobs</li>
             <li className="my-2 text-gray-800 ">Designers for hire</li>
             <li className="my-2 text-gray-800 ">
@@ -95,8 +95,8 @@ const Footer = () => {
             <li className="my-2 text-gray-800 ">Tags</li>
             <li className="my-2 text-gray-800 ">Places</li>
           </ul>
-          <h2 className="font-semibold my-4 text-sm">Design assets</h2>
-          <ul className="list-item text-sm">
+          <h2 className="font-semibold my-4 text-lg">Design assets</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">Dribbble Marketplace</li>
             <li className="my-2 text-gray-800 ">Creative Market</li>
             <li className="my-2 text-gray-800 ">Fontspring</li>
@@ -105,8 +105,8 @@ const Footer = () => {
         </div>
 
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-1/6 mx-1 my-2 ">
-          <h2 className="font-semibold my-4 text-sm">Design Resources</h2>
-          <ul className="list-item text-sm">
+          <h2 className="font-semibold my-4 text-lg">Design Resources</h2>
+          <ul className="list-item text-md">
             <li className="my-2 text-gray-800 ">Freelancing</li>
             <li className="my-2 text-gray-800 ">Design Hiring</li>
             <li className="my-2 text-gray-800 ">Design Portfolio</li>
@@ -123,7 +123,7 @@ const Footer = () => {
         </h3>
         <div className="flex  items-center sm:gap-1">
           <h3 className="text-gray-500 text-sm">
-            <span className="font-semibold text-black">
+            <span className="font-bold text-black">
               {shotsDribbled.toLocaleString()}{" "}
             </span>{" "}
             shots dribbled

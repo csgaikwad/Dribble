@@ -7,17 +7,17 @@ export default function Navbar() {
   const user = useRecoilValue(UserAtom);
   const navigate = useNavigate();
   return (
-    <div className="flex  justify-between border-b-2 border-gray-100 h-14 ">
-      <div className="flex px-4 md:px-8 mt-6 mb-4 md:gap-8 items-center justify-center">
+    <div className="flex  justify-between border-b-2 border-gray-100 h-auto ">
+      <div className="flex px-4 md:px-12 mt-4  md:gap-8 items-center justify-center">
         <h1
-          className="sacramento cursor-pointer transition duration-300 hover:scale-110"
-          style={{ fontSize: "1.6rem" }}
+          className="sacramento pt-2 cursor-pointer transition duration-300 hover:scale-125"
+          style={{ fontSize: "2.2rem" }}
           onClick={() => navigate("/")}
         >
           dribble
         </h1>
         <div>
-          <ul className="hidden md:flex gap-8  justify-center items-center text-[0.8rem] text-gray-500">
+          <ul className="hidden md:flex gap-8  justify-center items-center text-[1rem] text-gray-500">
             <li className="font-sans font-bold tracking-tight cursor-pointer transition duration-300 hover:scale-110">
               Inspiration
             </li>
@@ -37,14 +37,14 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex justify-center items-center pr-2 lg:pr-8 my-2 gap-4">
-        <div className="flex justify-start items-center gap-1 text-[0.7rem] text-gray-400  bg-gray-100 rounded-md px-2 w-10 md:w-28 h-8">
+        <div className="flex justify-start items-center gap-1 text-[0.8rem] text-gray-400  bg-gray-100 rounded-lg px-2 w-10 md:w-36 h-10">
           <img
-            className="size-5 cursor-pointer"
+            className="size-7 cursor-pointer"
             src="/search.svg"
             alt="search icon"
           />
           <input
-            className="customInputLocation h-full w-full bg-transparent outline-none hidden md:inline-block "
+            className="customInputLocation h-full w-full bg-transparent text-[1rem] outline-none hidden md:inline-block "
             type="text"
             name="search"
             id="search"
@@ -53,23 +53,23 @@ export default function Navbar() {
         </div>
         <div>
           <img
-            className="h-7 cursor-pointer"
+            className="h-10 cursor-pointer"
             src="/navbarIcon.png"
             alt="icon"
           />
         </div>
-        <div className="size-9">
+        <div className="size-12">
           {user.image ? (
             <img
-              className="size-9  rounded-full cursor-pointer"
+              className="size-12  rounded-full cursor-pointer"
               src={user.image}
               alt="profile"
             />
           ) : (
-            <div className="size-9 rounded-full bg-gray-200 cursor-pointer"></div>
+            <div className="size-12 rounded-full bg-gray-200 cursor-pointer"></div>
           )}
         </div>
-        <button className="text-white text-[0.8rem] text-center bg-pink-500 p-2 rounded-lg">
+        <button className="text-white text-[1rem] text-center bg-pink-500 p-2 px-4 rounded-lg">
           Upload
         </button>
       </div>

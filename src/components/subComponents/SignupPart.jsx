@@ -9,7 +9,7 @@ import { UserAtom } from "../atoms/UserAtom";
 export default function SignupPart() {
   const [name, setName] = useState("John");
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("John@gmail.com");
+  const [email, setEmail] = useState("account@refero.design");
   const [password, setPassword] = useState("");
   const [checked, setChecked] = useState(false);
   const [btnEnabled, setBtnEnabled] = useState(false);
@@ -126,7 +126,7 @@ export default function SignupPart() {
               setChecked(e.target.checked);
             }}
           />
-          <p className="text-[0.7rem] my-4">
+          <p className="text-[0.9rem] my-4 w-[26rem]">
             Creating an account means you're okay with our{" "}
             <span className="text-[#5746AD] font-semibold ">
               Terms Of Service
@@ -151,7 +151,7 @@ export default function SignupPart() {
           Create Account
         </button>
       </form>
-      <div className="text-[0.6rem] mt-4">
+      <div className="text-[0.8rem] mt-4 text-gray-500">
         <p>This site is protected by reCAPTCHA and the Google</p>
         <p>
           <span className="text-[#5746AD] font-semibold ">Privacy Policy</span>{" "}
