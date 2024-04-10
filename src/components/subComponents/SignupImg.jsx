@@ -24,7 +24,7 @@ export default function SignupImg() {
           </p>
         </motion.div>
       </div>
-      <div className="relative">
+      <div className="">
         <img className=" h-[26rem] w-[28rem]" src="/landingImg.png" alt="img" />
         <motion.p
           initial={{ x: "-50vw" }}
