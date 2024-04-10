@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="bg-gray-100 p-10 ">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between gap-8">
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[24rem]  mx-1 my-6">
-          <h1 className="sacramento text-2xl text-pink-500 mb-3">dribble</h1>
+          <h1 className="sacramento text-2xl text-[#EA4B8B] mb-3">dribble</h1>
           <p className="text-[1rem]  text-gray-900 w-full mt-2">
             Dribbble is the world's leading community for creatives to share,
             grow, and get hired.

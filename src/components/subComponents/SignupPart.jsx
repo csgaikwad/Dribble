@@ -144,7 +144,7 @@ export default function SignupPart() {
           </p>
         </div>
         <button
-          className={`${btnEnabled ? "bg-[#EA4B8B]" : "bg-pink-300"}
+          className={`${btnEnabled ? "bg-[#EA4B8B]" : "bg-[#f8b8d0]"}
           h-10 text-white rounded-lg w-60`}
           disabled={!btnEnabled}
         >

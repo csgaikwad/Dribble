@@ -40,7 +40,7 @@ export default function Profile() {
         }
       }}
     >
-      <h1 className="sacramento pt-6 pl-12 pb-3 text-pink-500 ">dribble</h1>
+      <h1 className="sacramento pt-6 pl-12 pb-3 text-[#EA4B8B] ">dribble</h1>
       <div className="flex flex-col  items-start  lg:w-1/2 p-6  text-wrap sm:self-center">
         <div>
           <h1 className="text-[1.8rem] md:text-[2.2rem] font-extrabold mb-2 tracking-tight">
@@ -103,7 +103,7 @@ export default function Profile() {
             className={`${
               uploadedImg && location
                 ? "bg-[#EA4B8B] text-[0.9rem]"
-                : "bg-pink-300 text-[1rem] "
+                : "bg-[#f8b8d0] text-[1rem] "
             }
             h-9 text-white rounded-lg w-52 mt-10   `}
             disabled={!uploadedImg || !location}

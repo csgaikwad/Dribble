@@ -69,7 +69,7 @@ export default function Navbar() {
             <div className="size-12 rounded-full bg-gray-200 cursor-pointer"></div>
           )}
         </div>
-        <button className="text-white text-[1rem] text-center bg-pink-500 p-2 px-4 rounded-lg">
+        <button className="text-white text-[1rem] text-center bg-[#EA4B8B] p-2 px-4 rounded-lg">
           Upload
         </button>
       </div>

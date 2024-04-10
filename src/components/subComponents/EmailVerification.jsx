@@ -22,14 +22,14 @@ export default function EmailVerification() {
       <p className="text-gray-500 my-1 text-[1.1rem]">
         Didn't receive the email? Check your Spam folder, it may have been
         caught by a filter. If you still don't see it, you can
-        <span className="text-pink-500 font-semibold">
+        <span className="text-[#EA4B8B] font-semibold">
           {" "}
           resend the confirmation email.
         </span>
       </p>
       <p className="text-gray-500 my-1 text-[1.1rem]">
         Wrong email address?
-        <span className="text-pink-500 font-semibold"> Change it.</span>
+        <span className="text-[#EA4B8B] font-semibold"> Change it.</span>
       </p>
     </div>
   );

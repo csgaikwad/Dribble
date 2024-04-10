@@ -27,7 +27,7 @@ export default function Purpose() {
       }}
     >
       <div className="flex items-center mb-1">
-        <h1 className="sacramento pt-5 pl-10 pb-2 text-pink-500 inline-block">
+        <h1 className="sacramento pt-5 pl-10 pb-2 text-[#EA4B8B] inline-block">
           dribble
         </h1>
         <button
@@ -92,7 +92,7 @@ export default function Purpose() {
         </p>
         <button
           className={`  w-52 h-10 rounded-md self-center mb-2 ${
-            optionSelected ? "mt-4 bg-pink-500" : "mt-5 bg-[#f8b8d0]"
+            optionSelected ? "mt-4 bg-[#EA4B8B]" : "mt-5 bg-[#f8b8d0]"
           } text-white text-[1rem] `}
           disabled={!optionSelected}
           onClick={() => {
