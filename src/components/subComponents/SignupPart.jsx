@@ -22,7 +22,7 @@ export default function SignupPart() {
       : setBtnEnabled(false);
   }, [name, username, email, password, checked]);
   return (
-    <div className="w-full md:w-[50%] h-full p-4 m-auto mt-14 ">
+    <div className="w-full lg:w-[40%] h-full p-4 m-auto mt-14 ">
       <ToastContainer position="top-right" autoClose={1000} />
       <p className="text-[0.8rem] m-1 absolute right-4 top-4">
         Already a member?{" "}
