@@ -7,7 +7,7 @@ const Footer = () => {
   let shotsDribbled = 20501853;
 
   return (
-    <footer className="bg-gray-100 p-10 ">
+    <footer className="bg-gray-100 p-10 cursor-default">
       <div className="container mx-auto flex flex-col sm:flex-row justify-between gap-8">
         <div className=" w-full sm:w-1/2 md:w-1/5 lg:w-[24rem]  mx-1 my-6">
           <h1
